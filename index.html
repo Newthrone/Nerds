@@ -1,11 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Nerds</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
   
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url( "img/320.png" );
+    }
+    /* Планшет */
+    @media ( min-width: 760px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/760.png" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "maket/nerds-index.jpg" );
+      }
+    }
+  </style>
+  <link href="pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="pixel-glass-js-master/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="header-nav">
+        <img src="/image/logo-big.svg" alt="logo" style="width: 139px; height: 56px">
+        <nav>
+          <ul>
+            <li><a href="">студия</a></li>
+            <li><a href="">клиенты</a></li>
+            <li><a href="">магазин</a></li>
+            <li><a href="">контакты</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="basket">корзина</a>
+      </div>
+      <section class="slideshow-container">
+        <div class="header-slider">
+          <h2>Долго, дорого, скрупулезно.</h2>
+          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a href="#" class="btn">узнать больше</a>
+          <img src="/image/slider-pc.svg" alt="slider-pc">
+        </div>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+    </div>
+  </header>
+  <section class="goods">
+    <section class="good-card">
+      <img src="/image/websites-image.jpg" alt="websites">
+      <h3>веб-сайты</h3>
+      <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+      <a href="#1" class="btn">заказать</a>
+    </section>
+    <section class="good-card">
+      <img src="/image/app-image.jpg" alt="apps">
+      <h3>приложения</h3>
+      <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
+      <a href="#1" class="btn">заказать</a>
+    </section>
+    <section class="good-card">
+      <img src="/image/presentation-image.jpg" alt="presentation">
+      <h3>презентации</h3>
+      <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+      <a href="#1" class="btn">заказать</a>
+    </section>
+  </section>
+  <section class="studio">
+    <div class="studio-left">
+      <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара. </h1>
+      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
+      </p>
+      <h4>Выполняем заказы на разработку:</h4>
+      <ul>
+        <li>Веб-сайтов любой сложности</li>
+        <li>Мобильных приложений для iOS и Android</li>
+        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      </ul>
+    </div>
+    <div class="studio-right">
+      <img src="/image/logo-big.svg" alt="" style="width: 187px; height: 75px">
+      <span>since 2004</span>
+      <h4>КАК Мы работаем:</h4>
+      <ul>
+        <li>С самоотдачей 146%</li>
+        <li>Соблюдая сроки на 100%</li>
+        <li>По предоплате 50%</li>
+      </ul>
+    </div>
+    <section class="studio-expiriens">
+      <img src="/image/expiriens-glukhanko.png" alt="glukhanko">
+      <img src="/image/expiriens-academy.png" alt="academy">
+      <img src="/image/expiriens-borodinski.png" alt="boronski">
+    </section>
+    <section class="map">
+      <section class="adress">
+        <h5>NЁRDS DESIGN STUDIO</h5>
+        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7 (812) 275-75-75</p>
+        <a href="#1" class="btn">напишите нам</a>
+      </section>
+    </section>
+    <footer>
+      <section class="socials">
+        <div>
+          <a href="#"></a>
+        </div>
+        <div>
+          <a href="#"></a>
+        </div>
+        <div>
+          <a href="#"></a>
+        </div>
+      </section>
+      <h1>Давайте дружить, это выгодно!</h1>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </footer>
+  </section>
 </body>
+
 </html>
