@@ -38,6 +38,7 @@
  */
   
   hr {
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     /* 1 */
     height: 0;
@@ -75,6 +76,7 @@
     /* 1 */
     text-decoration: underline;
     /* 2 */
+    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     /* 2 */
   }
@@ -222,6 +224,7 @@
  */
   
   legend {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     color: inherit;
@@ -256,6 +259,7 @@
   
   [type="checkbox"],
   [type="radio"] {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     padding: 0;
@@ -351,6 +355,7 @@
   /* general style*/
   
   * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -382,19 +387,56 @@ header {
   background: #eee;
 }
 
+.header-nav {
+  width: 900px;
+}
+
+nav, a {
+  padding-top: 55px;
+}
+
+.logo {
+  float: left;
+  margin-top: 28px;
+}
+
 nav, nav ul, nav li {
   display: inline-block;
 }
 
-.basket {
-  float: right;
-  padding-right: 10px;
+nav {
+  float: left;
+}
+
+nav li a { 
   color: black;
   text-transform: uppercase;
-  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 41px;
+}
+
+nav li:nth-child(1) a {
+  margin-left: 184px;
+}
+
+.basket {
+  float: right;
+  padding-right: 20px;
+  padd ing-left: 30px;
+  color: black;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 30px;
 }
+
+
+
+
+
+
+
+
 
 
 
