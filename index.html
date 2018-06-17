@@ -5,28 +5,31 @@
   <meta charset="UTF-8">
   <title>Nerds</title>
   <link rel="stylesheet" href="style.css">
-  
+
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position:  50% 0;
+      background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url( "img/320.png" );
+      background-image: url("img/320.png");
     }
     /* Планшет */
-    @media ( min-width: 760px ) {
+    
+    @media ( min-width: 760px) {
       HTML {
         /* Планшетный макет */
-        background-image: url( "img/760.png" );
+        background-image: url("img/760.png");
       }
     }
     /* Десктоп */
-    @media ( min-width: 960px ) {
+    
+    @media ( min-width: 960px) {
       HTML {
         /* Десктопный макет */
-        background-image: url( "maket/nerds-index.jpg" );
+        background-image: url("maket/nerds-index2.jpg");
       }
     }
+
   </style>
   <link href="pixel-glass-js-master/styles.css" rel="stylesheet">
   <script src="pixel-glass-js-master/script.js"></script>
@@ -47,22 +50,40 @@
         </nav>
         <a href="#" class="basket">корзина</a>
       </div>
-      <section class="slideshow-container">
-        <div class="header-slider">
-          <h2>Долго, дорого, скрупулезно.</h2>
-          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <a href="#" class="btn">узнать больше</a>
-          <img src="/image/slider-pc.svg" alt="slider-pc">
+      <section class="slideshow-container clearfix">
+        <div class="header-slider hide">
+          <div class="header-slider-text">
+            <h2>Долго, дорого, скрупулезно.</h2>
+            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+            <a href="#" class="btn">узнать больше</a>
+          </div>
+          <img src="/image/slider-pc.svg" alt="slider-pc" class="slider-picture">
         </div>
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="header-slider header-slider2 ">
+          <div class="header-slider-text">
+            <h2>Любите ли вы математику, как любим ее мы?</h2>
+            <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать</p>
+            <a href="#" class="btn">узнать больше</a>
+          </div>
+          <img src="/image/slider-calc.png" alt="slider-pc" class="slider-picture">
+        </div>
+        <div class="header-slider header-slider3 hide">
+          <div class="header-slider-text">
+            <h2>Только наркотики,<br> только хардкор!</h2>
+            <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
+            <a href="#" class="btn">узнать больше</a>
+          </div>
+          <img src="/image/slider-robot.png" alt="slider-pc" class="slider-picture">
+        </div>
+        <div class="switcher">
+          <span class="dot check" onclick="currentSlide(1)"></span>
+          <span class="dot check" onclick="currentSlide(2)"></span>
+          <span class="dot check" onclick="currentSlide(3)"></span>
         </div>
       </section>
     </div>
   </header>
-  <section class="goods">
+  <section class="goods wrapper">
     <section class="good-card">
       <img src="/image/websites-image.jpg" alt="websites">
       <h3>веб-сайты</h3>
@@ -82,7 +103,7 @@
       <a href="#1" class="btn">заказать</a>
     </section>
   </section>
-  <section class="studio">
+  <section class="studio wrapper">
     <div class="studio-left">
       <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара. </h1>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
