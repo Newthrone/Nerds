@@ -1,7 +1,8 @@
+// Header-slider
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+// for automatic slider
 function plusSlides() {
   slideIndex += 1;
   showSlides(slideIndex);  
@@ -24,8 +25,20 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  
+  // automatic slider
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
   setTimeout(plusSlides, 4000); // Change image every 2 seconds
+}
+
+
+// google map
+
+function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
 }
