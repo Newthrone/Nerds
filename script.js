@@ -31,14 +31,18 @@ function showSlides(n) {
   setTimeout(plusSlides, 4000); // Change image every 2 seconds
 }
 
-
 // google map
 
 function myMap() {
+    var spb = {lat: 59.938606085305835, lng: 30.32306171777837};
     var mapCanvas = document.getElementById("map");
     var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.2),
-        zoom: 10
+        center: spb,
+        zoom: 17
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+    position: spb,
+    map: map
+});
 }

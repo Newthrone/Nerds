@@ -13,16 +13,18 @@
       /* По умолчанию показывается мобильный макет */
       background-image: url("img/320.png");
     }
+
     /* Планшет */
-    
+
     @media ( min-width: 760px) {
       HTML {
         /* Планшетный макет */
         background-image: url("img/760.png");
       }
     }
+
     /* Десктоп */
-    
+
     @media ( min-width: 960px) {
       HTML {
         /* Десктопный макет */
@@ -131,15 +133,17 @@
     <img src="/image/expiriens-academy.png" alt="academy">
     <img src="/image/expiriens-borodinski.png" alt="boronski">
   </section>
-  <section class="map" i d="map">
+  <section class="mapwithlist">
+    <section class="map" id="map">
+    </section>
     <section class="adress">
       <h5>NЁRDS DESIGN STUDIO</h5>
-      <p>191186, Санкт-Петербург, 
-      ул. Б. Конюшенная, д. 19/8 тел. +7 (812) 275-75-75</p>
+      <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <p>тел. +7 (812) 275-75-75</p>
       <a href="#1" class="btn">напишите нам</a>
     </section>
   </section>
-  <footer class="wrapper">
+  <footer class="wrapper footer clearfix">
     <section class="socials">
       <div>
         <a href="#"></a>
@@ -151,12 +155,14 @@
         <a href="#"></a>
       </div>
     </section>
-    <h1>Давайте дружить, это выгодно!</h1>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <div class="friendmarafon">
+      <h1>Давайте дружить, это выгодно!</h1>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLlX5oXWN0l3l-Tl9w-PMPn1bJW6C0FYA&callback=myMap"></script>
 </body>
 
 </html>
