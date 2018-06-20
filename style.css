@@ -431,6 +431,17 @@
     text-transform: uppercase;
     font-size: 14px;
     line-height: 30px;
+    position: relative;
+  }
+  
+  .basket::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 7px;
+    background: url("image/sprite-icon.png") 0 -4px no-repeat;
   }
   
   .slideshow-container {
@@ -607,7 +618,7 @@
     padding-bottom: 72px;
     position: relative;
   }
-
+  
   .studio::after {
     content: "";
     width: 880px;
@@ -641,10 +652,10 @@
     line-height: 22px;
     color: #283136;
   }
-
-.studio ul {
-  margin-top: 22px;
-}
+  
+  .studio ul {
+    margin-top: 22px;
+  }
   
   .studio li {
     position: relative;
@@ -654,77 +665,77 @@
     margin-left: 36px;
     margin-top: 22px;
   }
-
-.studio li:before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background: #fb565a;
-  left: -36px;
-  top: 10px;
-}
-
-.studio-right {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 240px;
-  flex: 0 0 240px;
-  max-width: 240px;
-}
-
-.studio-right img {
-  display: block;
-  margin: 12px auto 0;
-  position: relative;
-  left: 5px;
-}
-
-.studio-right .creationdate { 
-  margin-top: 29px;
-  text-align: center;
-}
-
-.studio-right span {
-  text-transform: uppercase;
-  line-height: 8.56px;
-  position: relative;
-}
-
-.studio-right span::before,
-.studio-right span::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 65px;
-  background: #eeeeee;
-  top: 9px;
-  left: -79px;
-}
-
-.studio-right span::after {
-  left: 98px;
-  width: 62px;
-}
-
-.studio-right h4 {
-  margin-top: 67px;
-}
-
-.studio-expiriens {
+  
+  .studio li:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #fb565a;
+    left: -36px;
+    top: 10px;
+  }
+  
+  .studio-right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 240px;
+    flex: 0 0 240px;
+    max-width: 240px;
+  }
+  
+  .studio-right img {
+    display: block;
+    margin: 12px auto 0;
+    position: relative;
+    left: 5px;
+  }
+  
+  .studio-right .creationdate {
+    margin-top: 29px;
+    text-align: center;
+  }
+  
+  .studio-right span {
+    text-transform: uppercase;
+    line-height: 8.56px;
+    position: relative;
+  }
+  
+  .studio-right span::before,
+  .studio-right span::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 65px;
+    background: #eeeeee;
+    top: 9px;
+    left: -79px;
+  }
+  
+  .studio-right span::after {
+    left: 98px;
+    width: 62px;
+  }
+  
+  .studio-right h4 {
+    margin-top: 67px;
+  }
+  
+  .studio-expiriens {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 42px;
     padding: 0 29px 40px 22px;
     position: relative;
   }
-
+  
   .studio-expiriens::after {
     content: "";
     width: 880px;
@@ -733,89 +744,91 @@
     position: absolute;
     bottom: 0px;
   }
+  
+  .studio-expiriens img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  
+  .mapwithlist {
+    position: relative;
+    margin: 85px auto 0;
+  }
+  
+  .map {
+    height: 417px;
+  }
+  
+  .adress {
+    position: absolute;
+    height: 240px;
+    width: 250px;
+    top: 87px;
+    left: 26.8%;
+    background: #fff;
+  }
+  
+  .adress h5 {
+    padding: 26px 20px 0 20px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: normal;
+  }
+  
+  .adress p {
+    padding: 12px 20px 8px 21px;
+    color: #666666;
+    line-height: 20px;
+  }
+  
+  .adress .btn {
+    margin-top: 21px;
+    margin-left: 23px;
+    padding-left: 54px;
+    padding-right: 53px;
+  }
+  
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  
+  .footer .socials {
+    margin-top: 46px;
+  }
+  
+  footer a {
+    float: left;
+    height: 63px;
+    width: 63px;
+    border-radius: 50%;
+    background: #e1e1e1 url("image/sprite-icon.png") no-repeat -57px 50%;
+    margin-right: 26px;
+  }
+  
+  .facebook {
+    background-position: -146px;
+  }
 
-.studio-expiriens img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+.instagramm {
+  background-position: -235px;
 }
-
-.mapwithlist {
-  position: relative;
-  margin: 85px auto 0;
-}
-.map {  
-  height: 417px;
-}
-
-.adress {
-  position: absolute;
-  height: 240px;
-  width: 250px;
-  top: 87px;
-  left: 26.8%;
-  background: #fff;
-}
-
-.adress h5 {
-  padding: 26px 20px 0 20px;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: normal;
-}
-
-.adress p {
-  padding: 12px 20px 8px 21px;
-  color: #666666;
-  line-height: 20px;
-}
-
-.adress .btn {
-  margin-top: 21px;
-  margin-left: 23px;
-  padding-left: 54px;
-  padding-right: 53px;
-}
-
-.footer {  
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-
-.footer .socials {
-  margin-top: 46px;
-}
-
-footer a {
-  float: left;
-  height: 63px;
-  width: 63px;
-  border-radius: 50%;
-  background: #e1e1e1;
-  margin-right: 26px;
-}
-
-footer .friendmarafon {
-  float: left;
-  margin-left: 52px;
-}
-
-footer h1 {
-  margin-top: -2px;
-  margin-bottom: 10px;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: normal;
-}
-
-footer p {
-  color: #283136;
-  line-height: 22px;
-}
-
-
-
-
-
-
-
+  
+  footer .friendmarafon {
+    float: left;
+    margin-left: 52px;
+  }
+  
+  footer h1 {
+    margin-top: -2px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+  
+  footer p {
+    color: #283136;
+    line-height: 22px;
+  }
