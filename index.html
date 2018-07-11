@@ -7,6 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="image/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="image/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="image/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="image/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="image/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="image/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="image/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="image/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="image/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="image/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
+<link rel="manifest" href="image/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="image/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
   <style>
     HTML {
       background-repeat: no-repeat;
@@ -14,22 +33,20 @@
       /* По умолчанию показывается мобильный макет */
       background-image: url("img/320.png");
     }
-
     /* Планшет */
-
+    
     @media ( min-width: 760px) {
       HTML {
         /* Планшетный макет */
         background-image: url("img/760.png");
       }
     }
-
     /* Десктоп */
-
+    
     @media ( min-width: 960px) {
       HTML {
         /* Десктопный макет */
-        background-image: url("maket/nerds-index2.jpg");
+        background-image: url("maket/nerds-index-writeus1.jpg");
       }
     }
 
@@ -48,7 +65,7 @@
             <li><a href="">студия</a></li>
             <li><a href="">клиенты</a></li>
             <li><a href="">магазин</a></li>
-            <li><a href="">контакты</a></li>
+            <li><a href="#contact">контакты</a></li>
           </ul>
         </nav>
         <a href="#" class="basket">корзина</a>
@@ -137,11 +154,11 @@
   <section class="mapwithlist">
     <section class="map" id="map">
     </section>
-    <section class="adress">
+    <section class="adress" id="contact">
       <h5>NЁRDS DESIGN STUDIO</h5>
       <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <p>тел. +7 (812) 275-75-75</p>
-      <a href="#1" class="btn">напишите нам</a>
+      <a href="#1" class="btn" id="openModal">напишите нам</a>
     </section>
   </section>
   <footer class="wrapper footer clearfix">
@@ -161,25 +178,27 @@
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
-  
+
   <!-- Всплывающая форма сообщения -->
   <section id="myModal" class="writeus">
     <div class="modal-content">
-      <h1>личный кабинет</h1>
       <form action="">
         <fieldset>
-          <legend>введите пожалуйста свой логин и пароль</legend>
-          <label><input type="text" value="логин" name="login" class="input-login"></label>
-          <label><input type="text" value="пароль" name="password" class="input-password"></label>
-          <label><input class="checkbox" type="checkbox" checked><span class="checkbox-custom"></span><span class="label">запомните меня</span></label>
-          <a href="#2" class="nomemory">я забыл пароль!</a>
-          <a href="#2" class="btn">войти</a>
+          <div class="twocol">
+            <label>Ваше имя:
+            <input type="text" placeholder="представьтесь, пожалуйста" name="name" class="input-name"></label>
+            <label>Ваш e-mail:    
+            <input type="text" placeholder="для отправки ответа" name="email" class="input-email"></label>
+          </div>
+          <label class="textarea">Текст письма: 
+          <textarea placeholder="в свободной форме" name="text" rows="6" cols="69"></textarea>   </label>
+          <button class="btn">отправить</button>
         </fieldset>
       </form>
-      <span class="close">&times;</span>
+      <div class="close"></div>
     </div>
   </section>
-  
+
 
   <script src="script.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLlX5oXWN0l3l-Tl9w-PMPn1bJW6C0FYA&callback=myMap"></script>

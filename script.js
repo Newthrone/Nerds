@@ -32,7 +32,7 @@ function showSlides(n) {
   // automatic slider
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  setTimeout(plusSlides, 4000); // Change image every 2 seconds
+  setTimeout(plusSlides, 4000); // Change image every 4 seconds
 }
 
 // google map
@@ -40,11 +40,11 @@ function showSlides(n) {
 function myMap() {
   var spb = {
     lat: 59.938606085305835,
-    lng: 30.32306171777837
+    lng: 30.32363171777837
   };
   var mapCanvas = document.getElementById("map");
   var mapOptions = {
-    center: {lat: 59.939207096405835,
+    center: {lat: 59.939217096405835,
     lng: 30.31903571777837},
     zoom: 17
   };
@@ -56,3 +56,41 @@ function myMap() {
   });
   
 }
+
+
+// Modal window - write us
+
+var modal = document.getElementById('myModal');
+var btn = document.getElementById('openModal');
+var close = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
