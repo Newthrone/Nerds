@@ -1,4 +1,5 @@
 // Header-slider
+var t;
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -10,7 +11,9 @@ function plusSlides() {
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  clearTimeout(t);
+  slideIndex = n;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
@@ -20,19 +23,25 @@ function showSlides(n) {
   if (n > slides.length) {
     slideIndex = 1
   };
-  if (n < 1) {
-    slideIndex = slides.length
-  };
+//  if (n < 1) {
+//    slideIndex = slides.length
+//  };
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+//  for (i = 0; i < dots.length; i++) {
+//    dots[i].className = dots[i].className.replace(" active", "");
+//  }
+  
   // automatic slider
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  setTimeout(plusSlides, 4000); // Change image every 4 seconds
+  onSwitchOfTime();
+}
+
+function onSwitchOfTime() {
+  t = setTimeout(plusSlides, 4000); // Change image every 4 seconds
 }
 
 // google map
@@ -60,30 +69,42 @@ function myMap() {
 
 // Modal window - write us
 
-var modal = document.getElementById('myModal');
-var btn = document.getElementById('openModal');
-var close = document.getElementsByClassName("close")[0];
+document.addEventListener('DOMContentLoaded', onDomReady);
+ function onDomReady() {   
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openModal");
+    var close = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    btn.addEventListener('click', function(event) {
+      modal.style.display = "block";
+      event.stopPropagation();
+    });
 
-close.onclick = function() {
-  modal.style.display = "none";
-}
+    modal.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    function closebc() {
+      modal.style.display = "none";
     }
-}
 
+    document.addEventListener('click', closebc);
+    close.addEventListener('click', closebc);
 
-
-
-
-
-
+//        btn.onclick = function() {
+//          modal.style.display = "block";
+//        }
+//    
+//        close.onclick = function() {
+//          modal.style.display = "none";
+//        }
+//    
+//        document.onclick = function(event) {
+//        if (event.target == modal) {
+//        modal.style.display = "none";
+//    }
+//}
+    };
 
 
 
