@@ -23,17 +23,17 @@ function showSlides(n) {
   if (n > slides.length) {
     slideIndex = 1
   };
-//  if (n < 1) {
-//    slideIndex = slides.length
-//  };
+  //  if (n < 1) {
+  //    slideIndex = slides.length
+  //  };
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     dots[i].className = dots[i].className.replace(" active", "");
   }
-//  for (i = 0; i < dots.length; i++) {
-//    dots[i].className = dots[i].className.replace(" active", "");
-//  }
-  
+  //  for (i = 0; i < dots.length; i++) {
+  //    dots[i].className = dots[i].className.replace(" active", "");
+  //  }
+
   // automatic slider
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
@@ -48,14 +48,20 @@ function onSwitchOfTime() {
 
 function myMap() {
   var spb = {
-    lat: 59.938606085305835,
-    lng: 30.32363171777837
+    lat: 59.938606,
+    lng: 30.323631
   };
   var mapCanvas = document.getElementById("map");
   var mapOptions = {
-    center: {lat: 59.939217096405835,
-    lng: 30.31903571777837},
-    zoom: 17
+    center: {
+      lat: 59.939217,
+      lng: 30.319035
+    },
+    zoom: 17,
+    minZoom: 17,
+    maxZoom: 17,
+    //gestureHandling: 'none'
+    zoomControl: false    
   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
   var marker = new google.maps.Marker({
@@ -63,34 +69,34 @@ function myMap() {
     map: map,
     icon: '/image/marker.png'
   });
-  
-}
 
+}
 
 // Modal window - write us
 
 document.addEventListener('DOMContentLoaded', onDomReady);
- function onDomReady() {   
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("openModal");
-    var close = document.getElementsByClassName("close")[0];
 
-    btn.addEventListener('click', function(event) {
-      modal.style.display = "block";
-      event.stopPropagation();
-    });
+function onDomReady() {
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("openModal");
+  var close = document.getElementsByClassName("close")[0];
 
-    modal.addEventListener('click', function(event) {
-      event.stopPropagation();
-    });
+  btn.addEventListener('click', function (event) {
+    modal.style.display = "block";
+    event.stopPropagation();
+  });
 
-    function closebc() {
-      modal.style.display = "none";
-    }
+  modal.addEventListener('click', function (event) {
+    event.stopPropagation();
+  });
 
-    document.addEventListener('click', closebc);
-    close.addEventListener('click', closebc);
+  function closebc() {
+    modal.style.display = "none";
+  }
 
+  document.addEventListener('click', closebc);
+  close.addEventListener('click', closebc);
+}
 //        btn.onclick = function() {
 //          modal.style.display = "block";
 //        }
@@ -104,14 +110,3 @@ document.addEventListener('DOMContentLoaded', onDomReady);
 //        modal.style.display = "none";
 //    }
 //}
-    };
-
-
-
-
-
-
-
-
-
-
