@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nerds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/image/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/image/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/image/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/image/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/image/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/image/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/image/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/image/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/320.png");
+    }
+    /* Планшет */
+    
+    @media ( min-width: 760px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("img/760.png");
+      }
+    }
+    /* Десктоп */
+    
+    @media ( min-width: 960px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("maket/nerds-catalog.jpg");
+      }
+    }
+
+  </style>
+  <link href="pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="pixel-glass-js-master/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="header-nav clearfix">
+        <img src="/image/logo-big.svg" alt="logo" style="width: 139px; height: 56px" class="logo">
+        <nav>
+          <ul>
+            <li><a href="#1">студия</a></li>
+            <li><a href="#1">клиенты</a></li>
+            <li><span class="activepage">магазин</span></li>
+            <li><a href="#contact">контакты</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="basket">корзина</a>
+      </div>
+      <section>
+        <h1>Добро пожаловать в магазин готовых макетов</h1>
+      </section>
+    </div>
+  </header>
+  <section class="wrapper catalog" style="min-height: 1700px">
+    <section class="sorting">
+      <form action="" method="post">
+        <legend>стоимость</legend>
+        <input id="rangemin" type="range" multiple min="0" step="1000" max="15000" value="0" onchange="min1.value = rangemin.value">
+        <input id="rangemax" type="range" multiple min="0" step="1000" max="15000" value="15000" onchange="max1.value = rangemax.value">
+        <span>от</span>
+        <input type="text" id="min1" value="0" onchange="changerange()">
+        <span>до</span>
+        <input type="text" id="max1" value="15000" onchange="changerange()">
+      </form>
+    </section>
+    <section class="catalog-goods"></section>
+  </section>
+  <section class="mapwithlist">
+    <section class="map" id="map">
+    </section>
+    <section class="adress" id="contact">
+      <h5>NЁRDS DESIGN STUDIO</h5>
+      <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <p>тел. +7 (812) 275-75-75</p>
+      <a href="#1" class="btn" id="openModal">напишите нам</a>
+    </section>
+  </section>
+  <footer class="wrapper footer clearfix">
+    <section class="socials">
+      <div>
+        <a href="#1" class="vk">вконтакте</a>
+      </div>
+      <div>
+        <a href="#1" class="facebook">фейсбук</a>
+      </div>
+      <div>
+        <a href="#1" class="instagramm">инстаграмм</a>
+      </div>
+    </section>
+    <div class="friendmarafon">
+      <h1>Давайте дружить, это выгодно!</h1>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
+  </footer>
+
+  <!-- Всплывающая форма сообщения -->
+  <section id="myModal" class="writeus">
+    <div class="modal-content">
+      <form action="">
+        <fieldset>
+          <div class="twocol">
+            <label>Ваше имя:
+            <input type="text" placeholder="представьтесь, пожалуйста" name="name" class="input-name"></label>
+            <label>Ваш e-mail:    
+            <input type="text" placeholder="для отправки ответа" name="email" class="input-email"></label>
+          </div>
+          <label class="textarea">Текст письма: 
+          <textarea placeholder="в свободной форме" name="text" rows="6" cols="69"></textarea>   </label>
+          <button class="btn">отправить</button>
+        </fieldset>
+      </form>
+      <div class="close"></div>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLlX5oXWN0l3l-Tl9w-PMPn1bJW6C0FYA&callback=myMap"></script>
+</body>
+
+</html>

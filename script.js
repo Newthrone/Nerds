@@ -1,7 +1,8 @@
 // Header-slider
-var t;
 var slideIndex = 1;
-showSlides(slideIndex);
+if (document.getElementsByClassName("slideshow-container").length != 0) showSlides(slideIndex);
+var t; // timer
+
 
 // for automatic slider
 function plusSlides() {
@@ -61,7 +62,7 @@ function myMap() {
     minZoom: 17,
     maxZoom: 17,
     //gestureHandling: 'none'
-    zoomControl: false    
+    zoomControl: false
   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
   var marker = new google.maps.Marker({
@@ -97,16 +98,37 @@ function onDomReady() {
   document.addEventListener('click', closebc);
   close.addEventListener('click', closebc);
 }
-//        btn.onclick = function() {
-//          modal.style.display = "block";
-//        }
-//    
-//        close.onclick = function() {
-//          modal.style.display = "none";
-//        }
-//    
-//        document.onclick = function(event) {
-//        if (event.target == modal) {
-//        modal.style.display = "none";
-//    }
-//}
+
+
+// input[range]
+
+function changerange() {
+  rangemin.value = min1.value;
+  rangemax.value = max1.value;
+}
+
+
+
+
+
+
+
+
+
+//var elm = document.querySelector('input');
+//var container = elm.parentNode;
+//var values = elm.getAttribute('data-values').split(' ');
+//var min = document.getElementById('min');
+//var max = document.getElementById('max');
+//min.value = values[0];
+//max.value = values[1];
+
+//values.forEach(function (value, i, values) {
+//  var rangePart = elm.cloneNode();
+//  rangePart.type = 'range';
+//  rangePart.removeAttribute('data-values');
+//  rangePart.value = value;
+//  rangePart = container.insertBefore(rangePart, elm);
+//});
+
+//elm.remove();

@@ -384,6 +384,7 @@
   }
   
   header {
+    min-height: 328px;
     background: #eee;
   }
   
@@ -403,7 +404,8 @@
   nav,
   nav ul,
   nav li,
-  nav a {
+  nav a,
+nav span {
     display: inline-block;
   }
   
@@ -411,7 +413,7 @@
     float: left;
   }
   
-  nav li a {
+  nav li a, nav li span {
     color: black;
     text-transform: uppercase;
     font-size: 14px;
@@ -419,8 +421,8 @@
     margin-left: 41px;
   }
   
-  nav li:nth-child(1) a {
-    margin-left: 184px;
+  nav ul {
+    margin-left: 143px;
   }
   
   nav li a:hover,
@@ -434,8 +436,9 @@
     opacity: 0.4;
   }
   
-  nav li a.activepage {
-    box-shadow: inset 0px -2px 0px 0px rgba(238, 238, 238, 1), inset 0px -4px 0px 0px rgba(251, 86, 88, 1);
+  nav li span.activepage {
+    box-shadow: inset 0px -2px 0px 0px rgba(238, 238, 238, 1), 
+                inset 0px -4px 0px 0px rgba(251, 86, 88, 1);
   } 
     
   .basket {
@@ -1040,3 +1043,62 @@
     background: url(image/close-writeus.png) no-repeat;
     border-radius: 50%;
   }
+
+/*---------------Catalog------------
+------------------------------------*/
+header h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 37px 80px;
+  transform: translateX(-4px); /* for pixelperfect*/
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sorting {
+  
+}
+
+.sorting input[type="range"][multiple] {
+  display: block;
+  height: 2em;
+  margin: 0;
+  pointer-events: none;
+}
+.sorting input[type="range"][multiple] + input[type="range"][multiple] {
+  margin-top: -2em;
+}
+
+.sorting input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+}
+
+.sorting input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+}
+
+.sorting input[type="range"]::-ms-thumb {
+  pointer-events: all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
