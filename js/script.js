@@ -102,11 +102,12 @@ function onDomReady() {
 
 // input[range]
 
-function changerange() {
-  rangemin.value = min1.value;
-  rangemax.value = max1.value;
-}
+//function changerange() {
+//  rangemin.value = min1.value;
+//  rangemax.value = max1.value;
+//}
 
+      
 
 
 

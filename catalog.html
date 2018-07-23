@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <title>Nerds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+  <link rel="stylesheet" href="/css/ion.rangeSlider.skinNice.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
@@ -75,19 +77,51 @@
       </section>
     </div>
   </header>
-  <section class="wrapper catalog" style="min-height: 1700px">
-    <section class="sorting">
+  <section class="wrapper market" style="min-height: 1700px">
+    <section class="sorting-left-side">
       <form action="" method="post">
         <legend>стоимость</legend>
-        <input id="rangemin" type="range" multiple min="0" step="1000" max="15000" value="0" onchange="min1.value = rangemin.value">
-        <input id="rangemax" type="range" multiple min="0" step="1000" max="15000" value="15000" onchange="max1.value = rangemax.value">
+        <div class="range"><input type="text" id="range" name="range" value="" /></div>
+        
         <span>от</span>
         <input type="text" id="min1" value="0" onchange="changerange()">
         <span>до</span>
         <input type="text" id="max1" value="15000" onchange="changerange()">
+        
+        <legend>сетка:</legend>
+        <label><input type="radio" name="grid" checked>адаптивная</label>
+        <label><input type="radio" name="grid">фиксированная</label>
+        <label><input type="radio" name="grid">резиновая</label>
+        
+        <legend>особенности:</legend>
+        <label><input type="checkbox" checked>слайдер</label>
+        <label><input type="checkbox">блок преимуществ</label>
+        <label><input type="checkbox" checked>новости</label>
+        <label><input type="checkbox">галерея</label>
+        <label><input type="checkbox">корзина</label>
+        
+        <submit>показать</submit>        
       </form>
     </section>
-    <section class="catalog-goods"></section>
+    <section class="catalog">
+      <section class="panelsorting">
+        <span >сортировать:</span>
+        <span class="panelsorting-parameter">по цене</span>
+        <span class="panelsorting-parameter">по типу</span>
+        <span class="panelsorting-parameter">по функционалу</span>
+        <span class="sorting-down"></span>
+        <span class="sorting-up"></span>
+        
+        <section class="catalog-goods">
+          <div class="sitepreview"></div>
+          <div class="sitepreview"></div>
+          <div class="sitepreview"></div>
+          <div class="sitepreview"></div>
+          <div class="sitepreview"></div>
+          <div class="sitepreview"></div>
+        </section>
+      </section>
+    </section>
   </section>
   <section class="mapwithlist">
     <section class="map" id="map">
@@ -138,8 +172,29 @@
   </section>
 
 
-  <script src="script.js"></script>
+  <script src="/js/script.js"></script>  
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLlX5oXWN0l3l-Tl9w-PMPn1bJW6C0FYA&callback=myMap"></script>
+  <script src="js/jquery-1.12.3.min.js"></script>
+  <script src="/js/ion.rangeSlider.min.js"></script>
+  <script>
+
+    $(function () {
+
+        $("#range").ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            min: 0,
+            max: 15000,
+            from: 0,
+            to: 12000,
+            type: 'double',
+            step: 1,
+            prefix: "$",
+            grid: false
+        });
+
+    });
+</script>
 </body>
 
 </html>
