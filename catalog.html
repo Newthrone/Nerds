@@ -83,10 +83,13 @@
         <legend>стоимость</legend>
         <div class="range"><input type="text" id="range" name="range" value="" /></div>
         
-        <span>от</span>
-        <input type="text" id="min1" value="0" onchange="changerange()">
-        <span>до</span>
-        <input type="text" id="max1" value="15000" onchange="changerange()">
+        <div class="input-text">
+          <span>от</span>
+          <input type="text" id="min1" value="0" onchange="changerange()" size=3>
+          <span>до</span>
+          <input type="text" id="max1" value="15000" onchange="changerange()" size=3>
+        </div>
+        
         
         <legend>сетка:</legend>
         <label><input type="radio" name="grid" checked>адаптивная</label>

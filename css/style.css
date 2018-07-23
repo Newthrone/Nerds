@@ -1098,7 +1098,12 @@ header h1 {
 }
 
 .sorting-left-side .range input {
-  display: none;
+  display: none;  
+}
+
+.sorting-left-side .input-text {
+  margin-top: 14px;
+  text-transform: uppercase;
 }
 
 .sorting-left-side input[type=text]:nth-of-type(n+1) {
