@@ -1088,7 +1088,7 @@
   }
   
   .sorting-left-side legend:nth-of-type(n+2) {
-    margin-top: 50px;
+    margin-top: 51px;
   }
   
   .sorting-left-side .range {
@@ -1124,36 +1124,161 @@
   .sorting-left-side input[type=text]:nth-of-type(1) {
     margin-right: 14px;
   }
-
-.sorting-left-side label {
-  display: inline-block;
-  margin-top: 20px;
-  line-height: 20px;
-  text-transform: capitalize;
-  padding-left: 35px;
-  position: relative;
-}
-
-  /* "○" */
-  .sorting-left-side .icon-circle::before {
+  
+  .sorting-left-side input[type=radio],
+  .sorting-left-side input[type=checkbox] {
+    display: none;
+  }
+  
+  .sorting-left-side label {
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 20px;
+    padding-left: 35px;
+    padding-right: 30px;
+    position: relative;
+    color: #283136;
+  }
+  
+  .sorting-left-side label::first-letter {
+    text-transform: uppercase;
+  }
+  
+  .sorting-left-side .radio::before {
     content: "\25cb";
     display: block;
     position: absolute;
-    font-size: 48px;
+    font-size: 50px;
     left: -2px;
     bottom: 3px;
     color: #c1c1c1;
-  }  
-
-.sorting-left-side input[type=radio],
-.sorting-left-side input[type=checkbox]{
-  display: none;
-}
+  }
+  
+  .sorting-left-side .radio::after {
+    content: "\25cf";
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    left: 8px;
+    bottom: 1px;
+    color: #c1c1c1;
+  }
+  
+  .sorting-left-side input[type=radio]:checked+.radio::after {
+    display: block;
+  }
+  
+  .sorting-left-side .checkbox::before {
+    content: "\2610";
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    left: -2px;
+    bottom: 0px;
+    color: #c1c1c1;
+    border-radius: 5px;
+  }
+  
+  .sorting-left-side input[type=checkbox]:checked+.checkbox::before {
+    content: "\2611";
+  }
+  
+  .sorting-left-side label:hover {
+    color: #000;
+  }
+  
+  .sorting-left-side label:hover::before,
+  .sorting-left-side label:hover::after {
+    color: #b5b5b5;
+  }
+  
+  .sorting-left-side input:disabled+label {
+    color: #283136;
+    opacity: 0.4;
+  }
+  
+  .sorting-left-side input:disabled+label::before {
+    color: #e9e9e9;
+  }
+  
+  .sorting-left-side .submit {
+    outline: none;
+    border: none;
+    margin-top: 59px;
+    padding: 10px 48px 10px 46px;
+    font-family: 'RobotoMedium', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: #c1c1c1;
+    border-radius: 2px;
+  }
   
   .catalog {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 560px;
     flex: 0 1 560px;
+  }
+  
+  .panelsorting {
+    margin-top: 31px;
+  }
+  
+  .panelsorting span,
+  .panelsorting-parameter {
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #000;
+  }
+  
+  .panelsorting a {
+    text-decoration: none;
+  }
+  
+  .panelsorting .panelsorting-parameter {
+    margin-left: 34px;
+    margin-right: 7px;
+    border-bottom: 1px dotted #00ca74;
+    opacity: 0.3;
+  }
+  
+  .panelsorting .panelsorting-parameter:hover {
+    opacity: 1;
+    border-bottom: 1px solid #00ca74;
+  }
+  
+  .panelsorting a.panelsorting-parameter:active {
+    color: #000;
+    opacity: 1;
+    border-bottom: none;
+  }
+  
+  .panelsorting .parameter-active {
+    border-bottom: none;
+    opacity: 1;
+  }
+  
+  .panelsorting .sorting-down {
+    margin-left: 88px;
+    margin-right: -2px;
+  }
+  
+  .panelsorting .sorting-down,
+  .panelsorting .sorting-up {
+    font-size: 14px;
+    color: #e1e1e1;
+  }
+  
+  .panelsorting a:active {
+    color: #000;
+  }
+  
+  .sorting-down.sorting-active,
+  .sorting-up.sorting-active {
+    color: #00ca74;
   }
   
   .catalog-goods {
@@ -1162,14 +1287,145 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-top: 1px;
   }
   
   .sitepreview {
     width: 240px;
     height: 270px;
-    margin: 20px;
-    background: #97eff7;
+    margin: 20px 0px 60px;
+    padding-top: 30px;
+    background: #f1f1f1;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+  }
+  
+  .sitepreview:hover {
+    background: #797979;
+  }
+  
+  .catalog-goods .card-circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+  }
+  
+  .catalog-goods .card-circle::before,
+  .catalog-goods .card-circle::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 17px;
+  }
+  
+  .catalog-goods .card-circle::after {
+    left: 34px;
+  }
+  
+  .card-hover {
+    position: absolute;
+    top: 50px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: 0.7s linear;
+  }
+  
+  .sitepreview:hover>.card-hover {
+    opacity: 1;
+  }
+  
+  .card-hover h3 {
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  
+  .card-hover p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 12px;
+    color: #283136;
+  }
+  
+  .card-hover p.p-margin {
+    margin-top: 4px;
+  }
+  
+  .card-hover p::first-letter {
+    text-transform: uppercase;
+  }
+  
+  .card-hover button {
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+    width: calc(100% - 60px);
+    margin: 28px 30px 30px;
+    padding: 0;
+  }
+  
+  .card-hover button.button-margin {
+    margin-top: 12px;
+  }
+  
+  .paginator {
+    margin-top: 21px;
+    font-size: 0;
+    margin-bottom: -7px;
+  }
+  
+  .paginator a {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    ;
+    color: #000;
+    text-decoration: none;
+    background-color: #f2f2f2;
+  }
+  
+  .paginator a:not(.current):hover {
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+  }
+  
+  .paginator a:not(.current):active {
+    background-color: #d5d5d5;
+    border-color: #d5d5d5;
+    border-top-color: #b5b5b5;
+    box-shadow: inset 0 2px 0 0 #b5b5b5;
+  }
+  
+  .paginator a.current {
+    background-color: #fff;
+    border: 2px solid #f2f2f2;
+    line-height: 34px;
+  }
+  
+  .paginator a:last-child {
+    padding: 0 30px;
   }
