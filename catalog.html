@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="css/ion.rangeSlider.css" />
   <link rel="stylesheet" href="/css/ion.rangeSlider.skinNice.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
@@ -28,33 +27,36 @@
   <meta name="msapplication-TileImage" content="/image/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+  
+  
+  
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/320.png");
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/320.png" );
     }
-    /* Планшет */
-    
-    @media ( min-width: 760px) {
+    /* Tablet */
+    @media ( min-width: 760px ) {
       HTML {
-        /* Планшетный макет */
-        background-image: url("img/760.png");
+        /* Tablet layout */
+        background-image: url( "img/760.png" );
       }
     }
-    /* Десктоп */
-    
-    @media ( min-width: 960px) {
+    /* Desktop */
+    @media ( min-width: 960px ) {
       HTML {
-        /* Десктопный макет */
-        background-image: url("maket/nerds-catalog.jpg");
+        /* Desktop layout */
+        background-image: url( "/maket/nerds-catalog.jpg" );
       }
     }
-
   </style>
-  <link href="pixel-glass-js-master/styles.css" rel="stylesheet">
-  <script src="pixel-glass-js-master/script.js"></script>
+  <link href="/pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="/pixel-glass-js-master/script.js"></script>
+  
+  
+  
 </head>
 
 <body>
@@ -79,18 +81,20 @@
   </header>
   <section class="wrapper market">
     <section class="sorting-left-side">
-      <form action="" method="post">
-        <legend>стоимость</legend>
-        <div class="range"><input type="text" id="range" name="range" value="" /></div>
+      <form action="#echo.ru" method="post">
+        <fieldset>
+          <legend>стоимость</legend>
+          <div class="range"><input type="text" id="range" name="range" value="" /></div>
 
-        <div class="input-text">
-          <span>от</span>
-          <input type="text" id="min1" value="0" onchange="range.value" size=5>
-          <span>до</span>
-          <input type="text" id="max1" value="15000" onchange="changerange()" size=5>
-        </div>
-
-
+          <div class="input-text">
+            <span>от</span>
+            <input type="text" id="min1" value="0" onchange="range.value" size=5>
+            <span>до</span>
+            <input type="text" id="max1" value="15000" onchange="changerange()" size=5>
+          </div>
+        </fieldset>
+        
+<fieldset>
         <legend>сетка:</legend>
 
         <input type="radio" id="adaptive" name="radio" checked>
@@ -99,7 +103,9 @@
         <label class="radio" for="fix">фиксированная</label>
         <input type="radio" id="responsive" name="radio">
         <label class="radio" for="responsive">резиновая</label>
+        </fieldset>
 
+       <fieldset>
         <legend>особенности:</legend>
 
         <input type="checkbox" id="slider" name="checkbox" checked>
@@ -112,8 +118,9 @@
         <label class="checkbox" for="gallery">галерея</label>
         <input type="checkbox" id="basket" name="checkbox">
         <label class="checkbox" for="basket">корзина</label>
+        </fieldset>
 
-        <in put class="submit" type="submit" value="показать">
+        <input class="submit" type="submit" value="показать">
       </form>
     </section>
     <section class="catalog">
@@ -132,7 +139,7 @@
           <div class="card-hover">
             <h3>aviator</h3>
             <p>одностраничный макет <br> с авторским дизайном</p>
-            <button class="btn">8000 р.</button>
+            <div class="btn">8000 р.</div>
           </div>
         </a>
         <a href="#1" class="sitepreview">
@@ -141,7 +148,7 @@
           <div class="card-hover">
             <h3>sunset</h3>
             <p>интернет-магазин <br>с личным кабинетом</p>
-            <button class="btn">10000 р.</button>
+            <div class="btn">10000 р.</div>
           </div>
         </a>
         <a href="#1" class="sitepreview">
@@ -150,7 +157,7 @@
           <div class="card-hover">
             <h3>forte</h3>
             <p>отличный макет <br> для личного блога</p>
-            <button class="btn">5000 р.</button>
+            <div class="btn">5000 р.</div>
           </div>
         </a>
         <a href="#1" class="sitepreview">
@@ -159,7 +166,7 @@
           <div class="card-hover">
             <h3>modern organic thai</h3>
             <p class="p-margin">сайт для ресторана <br> быстрого питания</p>
-            <button class="btn button-margin">12000 р.</button>
+            <div class="btn button-margin">12000 р.</div>
           </div>
         </a>
         <a href="#1" class="sitepreview">
@@ -168,7 +175,7 @@
           <div class="card-hover">
             <h3>avenue</h3>
             <p>макет для блога <br> о путешествиях</p>
-            <button class="btn">8000 р.</button>
+            <div class="btn">8000 р.</div>
           </div>
         </a>
         <a href="#1" class="sitepreview">
@@ -177,7 +184,7 @@
           <div class="card-hover">
             <h3>dovetail</h3>
             <p>интернет-магазин <br> с галереей товаров</p>
-            <button class="btn">14000 р.</button>
+            <div class="btn">14000 р.</div>
           </div>
         </a>
       </section>
